@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import dog from './assets/istockphoto-618949520-1024x1024.jpg';
 import crying from './assets/tenor.gif'
 import audio from './assets/Male-Heavy-Whimpering-Crying-www.fesliyanstudios.com.mp3'
 import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,7 +25,12 @@ function App() {
   return (
     <>
       {!result ? <h1>Mag a outing ba tayo?</h1> : (
-        result === 'yes' ? <h1>Putangina tara</h1> : (
+        result === 'yes' ? (
+          <>
+            <img src={dog} style={{ width: 200 }} />
+            <h1>Putangina tara</h1>
+          </>
+        ) : (
           <>
             <img src={crying} style={{ width: 200 }} />
             <h1 style={{ fontSize: `${font_size}em` }}>Bakit hindi?</h1>
