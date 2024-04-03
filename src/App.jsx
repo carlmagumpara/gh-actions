@@ -14,6 +14,7 @@ function App() {
 
   const response = res => {
     if (res === 'yes') {
+      new Audio(audio).pause();
       setResult(res);
     } else {
       new Audio(audio).play();
