@@ -12,12 +12,14 @@ function App() {
   const [result, setResult] = useState(null);
   const [font_size, setFontSize] = useState(3.2);
 
+  const [audioP] = useState(new Audio(audio));
+
   const response = res => {
     if (res === 'yes') {
-      new Audio(audio).pause();
+      audioP.pause();
       setResult(res);
     } else {
-      new Audio(audio).play();
+      audioP.play();
       setFontSize(prevState => prevState * 1);
       setResult(res);
     }
