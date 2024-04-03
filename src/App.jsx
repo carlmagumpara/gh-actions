@@ -27,12 +27,12 @@ function App() {
       {!result ? <h1>Mag a outing ba tayo?</h1> : (
         result === 'yes' ? (
           <>
-            <img src={dog} style={{ width: 200 }} />
+            <img src={dog} style={{ width: 300 }} />
             <h1>Putangina tara</h1>
           </>
         ) : (
           <>
-            <img src={crying} style={{ width: 200 }} />
+            <img src={crying} style={{ width: 300 }} />
             <h1 style={{ fontSize: `${font_size}em` }}>Bakit hindi?</h1>
           </>
         )
